@@ -35,7 +35,7 @@
    int DeleteQueue()
    { 
        int idx;
-      if(tail=head)
+      if(tail==head)
     	{
     		printf("\n queue is empty");
     		exit(0);
