@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<malloc.h>
+#include<stdlib.h>
 typedef struct node 
     {
        int data ;
@@ -8,7 +10,7 @@ typedef struct node
     /* Declare head of the list as a Global Variable */
     NODE  *head ;
     NODE  *scanPtr ;
-  
+    int j=0;  
   DisplayMenu()
   {
   	int i=0;
@@ -24,6 +26,8 @@ typedef struct node
 	  }
 CreateList()
 {
+	head  = (struct node*) malloc (sizeof(struct node));
+	  
 	  }	  
 	  
 AddNode()
@@ -35,7 +39,7 @@ DeleteNode()
 	  }	  
 DisplayList()
 {
-	int j=0;
+
 	if(j==0)
 	{
 		printf("\n The List is empty. ");
