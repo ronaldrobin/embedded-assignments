@@ -27,6 +27,8 @@ typedef struct node
 CreateList()
 {
 	head  = (struct node*) malloc (sizeof(struct node));
+	head->data = 1;
+        head->next= NULL;
 	  
 	  }	  
 	  
