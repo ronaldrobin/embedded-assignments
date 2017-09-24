@@ -11,7 +11,7 @@ typedef struct node
     NODE  *head ;
     NODE  *scanPtr ;
     int j=0;  
-  DisplayMenu()
+ int DisplayMenu()
   {
   	int i=0;
   	
@@ -26,8 +26,11 @@ typedef struct node
 	  }
 CreateList()
 {
+	int val=0;
 	head  = (struct node*) malloc (sizeof(struct node));
-	head->data = 1;
+	printf("\n enter the value");
+	scanf("%d",&val);
+	head->data = val;
         head->next= NULL;
 	  
 	  }	  
