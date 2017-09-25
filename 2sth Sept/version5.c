@@ -8,7 +8,7 @@ typedef struct node
     } NODE ;
     
     /* Declare head of the list as a Global Variable */
-    NODE  *head ;
+    NODE  *head=NULL ;
     NODE  *scanPtr ;
     int j=0;  
   DisplayMenu()
@@ -27,7 +27,11 @@ typedef struct node
 CreateList()
 {
 	int val=0;
+   
 	head  = (struct node*) malloc (sizeof(struct node));
+	
+	//for()
+	 //struct node* newnode =(struct node*) malloc(sizeof(struct node));
     printf("\n enter the value");
     scanf("%d",&val);
 	head->data = val;
@@ -38,6 +42,22 @@ CreateList()
 	  
 AddNode()
 {
+	 int loop=0;
+	 NODE *newnode,*prev_node;
+	 int new_data;
+	 
+	 struct node* newnode =(struct node*) malloc(sizeof(struct node));
+	 printf("\n enter the new data");
+	 scanf("%d",&new_data);
+  
+    
+    newnode->data  = new_data;
+  
+    
+    newnode->next = prev_node->next; 
+  
+    
+    prev_node->next = new_node;
 	  }	  
 	  
 DeleteNode()
