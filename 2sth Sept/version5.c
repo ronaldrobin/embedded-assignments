@@ -67,7 +67,7 @@ DeleteNode()
 {
 	struct node *n=head;
 
-	if(j==0)
+	if(j==0 || head=NULL)
 	{
 		printf("\n The List is empty. ");
 	}
@@ -86,12 +86,17 @@ DeleteList()
 	int key;
  	printf("\n enter the key element to delete");
  	scanf("%d",&key);
+ 	if(head==NULL)
+ 	{
+ 		printf("\n the list is empty");
+	 }
  	
 	  while (head != NULL)
     {
         if (head->data == key)
 	  	  free(head);
 	  }
+     head = head->next;
 }
 void SearchList()
  {
