@@ -42,32 +42,67 @@ CreateList()
 	  
 AddNode()
 {
-	 int loop=0;
-	 NODE *newnode,*prev_node;
+	 int pos=0,i;
+	 NODE *newnode,*current,*temp,*temp1;
 	 int new_data;
 	 
-	 struct node* newnode =(struct node*) malloc(sizeof(struct node));
-	 printf("\n enter the new data");
-	 scanf("%d",&new_data);
-  
-    
-    newnode->data  = new_data;
-  
-    
-    newnode->next = prev_node->next; 
-  
-    
-    prev_node->next = new_node;
-	  }	  
+	 newnode =(struct node*) malloc(sizeof(struct node));
+	 if(newnode==NULL)
+	 {
+	 	printf("\n memory allocation failed");
+	 }
+	 st :
+    printf("nEnter the position : ");
+    scanf("%d",&pos);
+
+   
+	 if(head==NULL)
+       {
+       head=newnode;
+       current=newnode;
+       }
+    else
+       {
+       temp = head;
+             for(i=1;i< pos-1;i++)
+             {
+             temp = temp->next;
+             }
+       temp1=temp->next;
+       temp->next = newnode;
+       newnode->next=temp1;
+       }
+}
+	    
 	  
-DeleteNode()
+ void DeleteNode()
 {
-	  }	  
+	int key;
+	struct node *temp=head;
+	struct node *temp1;
+	printf("\n enter the node to be deleted");
+	scanf("%d",&key);
+	if(head->next==NULL)
+	{
+		printf("\n the list is empty \n ");
+		while((temp->next != NULL) && (temp->data != key))
+		{
+			temp1 = temp;
+			temp = temp->next;
+		}
+		if(temp->data == key)
+		{
+			temp1->next = temp->next;
+			free(temp);
+	}
+	
+	  }	 
+}
  void DisplayList()
 {
 	struct node *n=head;
 
-	if(j==0 || head=NULL)
+	if(j==0 || head==NULL)
 	{
 		printf("\n The List is empty. ");
 	}
@@ -81,11 +116,10 @@ DeleteNode()
 	  
 	   
 	  
-DeleteList()
+void DeleteList()
 {
-	int key;
- 	printf("\n enter the key element to delete");
- 	scanf("%d",&key);
+	struct node *temp;
+
  	if(head==NULL)
  	{
  		printf("\n the list is empty");
@@ -93,10 +127,13 @@ DeleteList()
  	
 	  while (head != NULL)
     {
-        if (head->data == key)
-	  	  free(head);
+    	    head ==temp;
+         temp->data == 0;
+	  	  free(temp);
+	     head = head->next;
 	  }
-     head = head->next;
+	  
+   
 }
 void SearchList()
  {
@@ -172,5 +209,6 @@ void SearchList()
                    break ;
                 }
              }
-        }
     }
+		}
+    
