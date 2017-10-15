@@ -16,3 +16,9 @@ Declaration specifies the properties of a variable.
 Definition declares a variable and causes the storage to be allocated.
     int x = 10;         /* x is declared as an integer and allocated space and initialized to 10 */
     int roll_no[100];
+    
+ans3.>
+Array variables are declared identically to variables of their data type, except that the variable name is followed by one pair of square [ ] brackets for each dimension of the array.
+Uninitialized arrays must have the dimensions of their rows, columns, etc. listed within the square brackets.
+Dimensions used when declaring arrays in C must be positive integral constants or constant expressions.
+An array when declared gets allocated in contigious memory locations,whereas the variables when declared get different locations.
