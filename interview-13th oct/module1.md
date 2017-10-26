@@ -68,3 +68,50 @@ The name calloc stands for "contiguous allocation".
 The only difference between malloc() and calloc() is that, malloc() allocates single block of memory whereas calloc() allocates multiple blocks of memory each of same size and sets all bytes to zero.
 syntax:ptr = (cast-type*)calloc(n, element-size);
 This statement will allocate contiguous space in memory for an array of n elements.
+
+ans8.>
+A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location.
+Yes we have used pointers in many occasions
+eg:Dynamic memory allocation
+
+ans9.>
+Dangling pointers arise during object destruction, when an object that has an incoming reference is deleted or deallocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the deallocated memory.
+
+ans10.>
+Void pointer or generic pointer is a special type of pointer that can be pointed at objects of any data type. A void pointer is declared like a normal pointer, using the void keyword as the pointer’s type.The pointer defined in this manner do not have any type associated with them and can hold the address of any type of variable.One of the main uses of void pointer is when you need to return a dynamic data type that isn't known ahead of time.  For example, malloc().
+
+ans11.>Modular programming is the process of subdividing a computer program into separate sub-programs. A module is a separate software component.Modular programming is subdividing your program into separate subprograms such as functions and subroutines.
+
+
+ans12.>Switch case statement is an substitute for long if else statements.When a case constant is found that matches the switch expression, control of the program passes to the block of code associated with that case.The break statement is used to prevent the code running into the next case
+
+ans13.>No the compiler will not give any error,because the position of the default statement has no effect in execution process.
+
+ans14.>There is no need for a break in the default case. It runs smack into a closing brace. 
+
+ans15.>We have to check if the file pointer is pointing to an null value.
+
+ans16.>The function call for opening a file is FILE *fopen(const char *filename, const char *mode)
+
+Filename is the name of the file that has to be opened.
+
+Mode is the type of operation that is performed on the file i.e. read or write.
+
+ans17.>Enumeration (or enum) is a user defined data type in C. It is mainly used to assign names to integral constants.
+   enum is the key word used.
+   
+ans18.>If the first parameter is replaced with STDOUT then it prints the output to the screen.
+
+ans19.>Bit wise operators are used to perform bit level operations.
+
+There are 6 operators
+
+Symbol	Operator
+&	     bitwise AND
+|	     bitwise inclusive OR
+^	     bitwise XOR (eXclusive OR)
+<<	     left shift
+>>	     right shift
+~	     bitwise NOT (one's complement) (unary)
+
+ans20.> Recurssive functions are those which are called by the function itself again and again untill an exit condition is satisfied.
